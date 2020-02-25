@@ -1,0 +1,15 @@
+---
+description: 
+---
+doctype html
+html.no-js(lang='de')
+  head
+    meta(charset='utf-8')
+    script
+      | document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'has-js '
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    if description
+      meta(name="description" content=description)
+    title= title
+    link(rel="stylesheet" href="/styles/index.css")
+  body.font-sans(id="top" itemscope itemtype="http://schema.org/WebPage") !{content}

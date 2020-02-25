@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === 'production') {
               return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
             }
           },
-          extensions: ['css', 'html', 'vue'],
+          extensions: ['css', 'html'],
         },
       ],
     })

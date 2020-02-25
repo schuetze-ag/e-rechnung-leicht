@@ -8,8 +8,8 @@
     "styles:prod": "node-sass src/styles/ --output dist/styles/ && postcss ./dist/styles/*.css --replace",
     "styles:dev": "node-sass src/styles/ --output dist/styles/ --source-map true --source-map-contents true && postcss ./dist/styles/*.css --replace",
     "serve": "light-server -c .lightserverrc",
-    "dev": "NODE_ENV=development npm-run-all clean styles:dev eleventy:default --parallel eleventy:watch serve --print-label",
-    "build": "NODE_ENV=production npm-run-all clean styles:prod eleventy:default --print-label"
+    "dev": "NODE_ENV=development npm-run-all eleventy:default styles:dev --parallel eleventy:watch serve --print-label",
+    "build": "NODE_ENV=production npm-run-all eleventy:default styles:prod --print-label"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.8.3",

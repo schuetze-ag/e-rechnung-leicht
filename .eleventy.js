@@ -1,11 +1,10 @@
 module.exports = function(eleventyConfig) {
-  /* Pass through - stop eleventy touching */
   eleventyConfig.addPassthroughCopy('src/images');
 
   return {
-    dir: { input: 'src', output: 'dist', data: '_data' },
+    dir: { input: 'src', output: 'dist' },
     passthroughFileCopy: true,
-    templateFormats: ['njk', 'md', 'css', 'html', 'yml'],
-    htmlTemplateEngine: 'njk',
+    templateFormats: ['pug', 'md', 'css', 'html', 'yml'],
+    htmlTemplateEngine: 'pug',
   };
 };
