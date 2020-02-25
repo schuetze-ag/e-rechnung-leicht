@@ -1,0 +1,4 @@
+[build]
+  publish = "dist"
+  command = "yarn build"
+  environment = { YARN_FLAGS = "--immutable --immutable-cache --inline-builds" }
